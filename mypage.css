@@ -1,0 +1,211 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", "Roboto", sans-serif;
+}
+@font-face {
+  src: url(fonts/Sis-JpRJm.ttf);
+  font-family: sis;
+}
+@font-face {
+  src: url(fonts/Novem-gx193.ttf);
+  font-family: novem;
+}
+@font-face {
+  font-family: Unitblock;
+  src: url(fonts/Unitblock-JpJma.ttf);
+}
+@font-face {
+  font-family: PoetsenOne;
+  src: url(PoetsenOne-Regular.ttf);
+}
+body {
+  background-color: rgb(218, 218, 218);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+
+.left,
+.mid,
+.right {
+  height: 100%;
+  width: 33.33%;
+}
+.lefttop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 30px;
+}
+.leftbottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 30px;
+}
+.mainimage {
+  align-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 85%;
+  width: auto;
+  margin: auto;
+  background-color: #cccccc;
+  border: black solid;
+}
+  
+.righttop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 30px;
+}
+.rightmid {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin: 30px;
+}
+.rightbottom { 
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+}
+.name {
+  font-family: sis, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 45px;
+}
+.gallery, .contacts, .about {
+  font-family: Unitblock;
+  font-size: 25px;
+}
+.gallery{
+  color: black;
+}
+.contacts {
+  color: black;
+}
+.about {
+  color: black;
+}
+.headtittle {
+  color: black;
+  font-family: novem, sans-serif;
+  font-size: 30px;
+}
+.hm h {
+  color: rgb(255, 255, 255);
+  background-color: black;
+  border-radius: 50px;
+  padding: 10px;
+  font-family: PoetsenOne;
+  font-size: 20px;
+}
+.vp h {
+  color: black;
+  font-family: Unitblock, sans-serif;
+  font-size: 25px;
+}
+.vpb {
+  height: 25px;
+  width: 35px;
+  border-radius: 50px;
+  border: transparent;
+  background-color: black;
+  color: white;
+}
+.vpb:hover, .hm h:hover {
+  box-shadow: -3px 3px 7px rgba(0, 0, 0, 0.6);
+  transform: translatey(-3px);
+  transition: all 0.3s ease;
+}
+
+.clock, .clockm {
+  text-align: center;
+  border: black dotted;
+  padding: 10px;
+  border-radius: 50px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+.clockm {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .left,
+  .mid,
+  .right {
+      width: 100%;
+  }
+
+  .name {
+      font-size: 25px;
+  }
+
+  .headtittle {
+      font-size: 30px;
+  }
+
+  .gallery,
+  .contacts,
+  .about {
+      font-size: 20px;
+  }
+
+  .hm h,
+  .vp h {
+      font-size: 20px;
+  }
+
+  .vpb,
+  .hm h:hover {
+      font-size: 12px;
+  }
+  .clock {
+    visibility: hidden;
+  }
+  .clockm {
+    font-size: 14px;
+    margin: 10px;
+    visibility: visible;
+  }
+  .mainimage {
+    width: 50%; /* Adjusted width for smaller screens */
+    height: auto;
+    margin: auto;
+}
+}
+@media only screen and (max-width: 1250px) {
+  .mainimage {
+    width: 70%; /* Adjusted width for smaller screens */
+    height: auto;
+    margin: auto;
+}
+}
+
+@media only screen and (max-width: 950px) {
+  .mainimage {
+    width: 55%; /* Adjusted width for smaller screens */
+    height: auto;
+    margin: auto;
+}
+}
